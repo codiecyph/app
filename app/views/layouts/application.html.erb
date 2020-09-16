@@ -2,18 +2,21 @@
 <html>
   <head>
     <title>YelpApp</title>
+    <%= render 'layouts/bootstrap'%>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   
-<%= render 'layouts/bootstrap'%>
+
   </head>
 
   <body>
   <%= render 'layouts/navbar' %>
     <div class="container-fluid">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     <%= yield %>
    
 

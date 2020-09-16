@@ -1,14 +1,14 @@
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
  ##Remember # Choose what kind of storage to use for this uploader:
 #  storage :file # for saving image on localmachine
   
 
 
-  ### toc choose which storage use fog I uncommented this section
+  ### to choose which storage use fog I uncommented this section
   #storage :fog
 if Rails.env.production?
   storage :fog
@@ -33,7 +33,7 @@ end
   # end
 
   # Process files as they are uploaded:
-  # process scale: [200, 300]
+  process resize_to_fit: [200, 300]
   #
   # def scale(width, height)
   #   # do something
