@@ -110,6 +110,6 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-# Required for devise gem. Remember to change for localhost for main website
+# Required for devise gem. Remember to change for localhost:3000 for main website 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
