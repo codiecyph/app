@@ -1,6 +1,6 @@
 <%= form_with(model: [@restaurant, @review], local: true) do |form| %>
   <% if review.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
       <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
       <ul>
@@ -11,10 +11,7 @@
     </div>
   <% end %>
 
-  <div class="forn=group">
-    <%= form.label :rating %>
-    <%= form.number_field :rating, class: "form-control"%>
-  </div>
+<div id="star-rating"></div>
 
   <div class="form-group">
     <%= form.label :comment %>
@@ -25,3 +22,12 @@
     <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
+
+
+<script>
+  $('#star-rating').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>

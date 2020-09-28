@@ -23,11 +23,18 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+#gem 'bootstrap'
+#gem 'jquery-rails'
+
+
+# gem 'bootstrap-sass', '~> 3.4.1'
+
+gem 'image_processing', '~> 1.2'
+gem 'searchkick'
 gem 'devise'
 gem "mini_magick"
 gem 'figaro'
-# gem 'fog-aws'
+gem 'fog-aws'
 gem 'carrierwave', '~> 2.0'
 gem 'pg', group: :production
 
